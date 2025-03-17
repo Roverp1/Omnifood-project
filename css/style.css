@@ -117,12 +117,23 @@ body {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
 .heading-primary {
   font-size: 5.1rem;
   line-height: var(--lh-small);
   margin-bottom: 3.2rem;
 
   color: var(--grey-color-v3);
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
 }
 
 .btn:is(:link, :visited) {
@@ -210,10 +221,6 @@ body {
 }
 
 .hero__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
   column-gap: 9.6rem;
 
   max-width: 130rem;
@@ -279,7 +286,7 @@ body {
 
 /*FEATURED IN*/
 .featured-in__section {
-  margin: 4.8rem 0;
+  margin: 4.8rem 0 9.6rem 0;
 }
 
 .featured-in__heading {
@@ -305,4 +312,12 @@ body {
 
 .featured-in__logos img {
   height: 3.2rem;
+}
+
+/*HOW TO SECTION*/
+.how-to__step {
+}
+
+.how-to__step__img {
+  width: 45%;
 }
