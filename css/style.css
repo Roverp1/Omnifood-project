@@ -107,6 +107,14 @@ html {
 body {
   font-family: "Rubik";
   color: var(--grey-color-v5);
+
+  /*TEMPORARY*/
+  margin-bottom: 10rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .heading-primary {
@@ -267,4 +275,34 @@ body {
   font-weight: var(--fw-bold);
 
   color: var(--shade-color-v1);
+}
+
+/*FEATURED IN*/
+.featured-in__section {
+  margin: 4.8rem 0;
+}
+
+.featured-in__heading {
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 1.4rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.75px;
+  margin-bottom: 2.4rem;
+
+  color: var(--grey-color-v8);
+}
+
+.featured-in__logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+.featured-in__logos img {
+  height: 3.2rem;
 }
