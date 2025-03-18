@@ -394,3 +394,35 @@ body {
 .how-to__step__img {
   width: 45%;
 }
+
+/*MEAL SECTION*/
+.meal__heading-container {
+  text-align: center;
+}
+
+.meal__items {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 9.8rem;
+}
+
+.meal__card {
+  border-radius: var(--bdrs-medium);
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1);
+}
+
+.meal__img {
+  width: 100%;
+}
+
+.mael__info-list {
+  list-style: none;
+}
+
+.meal__info__icon {
+  height: 2.4rem;
+
+  color: var(--main-color);
+}
+
+.meal__info__text {
+}
