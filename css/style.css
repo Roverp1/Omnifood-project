@@ -90,6 +90,8 @@
   --grey-color-v3: #333;
   --grey-color-v5: #555;
   --grey-color-v8: #888;
+  --grey-color-light-for-fff-bgc: #767676;
+  --grey-color-light-for-tint-bgc: #6f6f6f;
 }
 
 /*GENERAL STYLES */
@@ -115,6 +117,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .grid {
@@ -122,18 +125,41 @@ body {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
+  row-gap: 9.6rem;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: var(--grey-color-v3);
 }
 
 .heading-primary {
   font-size: 5.1rem;
   line-height: var(--lh-small);
   margin-bottom: 3.2rem;
-
-  color: var(--grey-color-v3);
 }
 
 .heading-secondary {
-  font-size: 3.6rem;
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  margin-bottom: 2.4rem;
+}
+
+.annotaion {
+  text-transform: uppercase;
+
+  display: inline-block;
+
+  font-size: 1.6rem;
+  font-weight: var(--fw-medium);
+  margin-bottom: 1.6rem;
+
+  color: var(--shade-color-v1);
 }
 
 .btn:is(:link, :visited) {
@@ -286,7 +312,7 @@ body {
 
 /*FEATURED IN*/
 .featured-in__section {
-  margin: 4.8rem 0 9.6rem 0;
+  padding: 4.8rem 0 3.2rem 0;
 }
 
 .featured-in__heading {
@@ -315,7 +341,54 @@ body {
 }
 
 /*HOW TO SECTION*/
-.how-to__step {
+.how-to__section {
+  padding: 9.6rem 0;
+}
+
+.how-to__step__number {
+  font-size: 8.6rem;
+  font-weight: var(--fw-semi-bold);
+
+  color: #ddd;
+}
+
+.how-to__step__describtion {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.how-to__step--img-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-to__step--img-wrapper::before,
+.how-to__step--img-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.how-to__step--img-wrapper::before {
+  width: 80%;
+  padding-bottom: 80%;
+  z-index: -2;
+
+  background-color: var(--tint-color-v1);
+}
+
+.how-to__step--img-wrapper::after {
+  width: 60%;
+  padding-bottom: 60%;
+  z-index: -1;
+
+  background-color: var(--tint-color-v2);
 }
 
 .how-to__step__img {
