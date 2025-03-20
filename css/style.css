@@ -104,10 +104,11 @@
 
 html {
   font-size: 62.5%;
+  /*font-size: 15px;*/
 }
 
 body {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   color: var(--grey-color-v5);
 
   /*TEMPORARY*/
@@ -123,31 +124,34 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  align-items: center;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
 }
 
-.heading-primary,
-.heading-secondary,
-.heading-tertiary,
+.grid--center {
+  justify-items: center;
+  align-items: center;
+}
+
+.heading--primary,
+.heading--secondary,
+.heading--tertiary,
 .heading--quaternary {
   color: var(--grey-color-v3);
 }
 
-.heading-primary {
+.heading--primary {
   font-size: 5.1rem;
   line-height: var(--lh-small);
   margin-bottom: 3.2rem;
 }
 
-.heading-secondary {
+.heading--secondary {
   font-size: 4.4rem;
   margin-bottom: 9.6rem;
 }
 
-.heading-tertiary {
+.heading--tertiary {
   font-size: 3rem;
   margin-bottom: 2.4rem;
 }
@@ -270,8 +274,6 @@ b {
 }
 
 .hero__container {
-  column-gap: 9.6rem;
-
   max-width: 130rem;
   padding: 4.8rem 3.2rem 9.6rem 3.2rem;
   margin: 0 auto;
@@ -429,13 +431,21 @@ b {
 
 .meal__items {
   grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 4.8rem;
 }
 
 .meal__card {
   overflow: hidden;
+  transition: all 0.4s;
 
   border-radius: var(--bdrs-medium);
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.meal__card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal__img {
@@ -515,7 +525,35 @@ b {
 }
 
 .meal__link:is(:link, :visited) {
+  text-decoration: none;
+  transition: all 0.3s;
+
+  display: block;
+
   font-size: 1.8rem;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px solid currentColor;
 
   color: var(--main-color);
+}
+
+.meal__link:is(:hover, :active) {
+  border-bottom: 1px solid transparent;
+
+  color: var(--shade-color-v1);
+}
+
+/*TESTIMONIAL SECTION*/
+.testimonial__container {
+  background-color: var(--tint-color-v1);
+}
+
+.testimonial__gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.testimonial__gallery__img {
+  width: 100%;
 }
