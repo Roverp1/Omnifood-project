@@ -104,7 +104,6 @@
 
 html {
   font-size: 62.5%;
-  /*font-size: 15px;*/
 }
 
 body {
@@ -134,6 +133,10 @@ body {
 .grid--center {
   justify-items: center;
   align-items: center;
+}
+
+.wrapper--text-align {
+  text-align: center;
 }
 
 .heading--primary,
@@ -606,4 +609,98 @@ b {
 
 .pricing__heading-wrapper {
   margin-bottom: 9.6rem;
+}
+
+.pricing__card {
+  justify-self: end;
+
+  width: 75%;
+  border: 2px solid var(--tint-color-v1);
+  border-radius: var(--bdrs-medium);
+  padding: 4.8rem;
+}
+
+.pricing__plan-header {
+  margin-bottom: 4.8rem;
+}
+
+.pricing__annotation {
+  font-size: 2rem;
+  font-weight: var(--fw-semi-bold);
+}
+
+.pricing__cost {
+  margin-bottom: 1.6rem;
+
+  color: var(--grey-color-v3);
+}
+
+.pricing__currency {
+  font-size: 3rem;
+  font-weight: var(--fw-medium);
+  margin-right: 0.3rem;
+}
+
+.pricing__amount {
+  font-size: 6.2rem;
+  font-weight: var(--fw-semi-bold);
+}
+
+.pricing__cost-per-month {
+  font-size: 1.6rem;
+
+  color: var(--grey-color-light-for-fff-bgc);
+}
+
+.pricing__plan-features {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 4.8rem;
+}
+
+.pricing__plan-feature {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.pricing__icon {
+  height: 3rem;
+  width: 3rem;
+
+  color: var(--main-color);
+}
+
+.pricing__btn-container {
+  text-align: center;
+}
+
+.pricing__card--best-value {
+  justify-self: start;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: var(--tint-color-v1);
+}
+
+.pricing__card--best-value::before {
+  content: "Best value";
+
+  position: absolute;
+  text-transform: uppercase;
+
+  top: 7%;
+  right: -12%;
+  transform: rotate(45deg);
+  font-size: 1.6rem;
+  font-weight: var(--fw-semi-bold);
+  padding: 0.4rem 5.4rem;
+
+  color: var(--grey-color-v3);
+  background-color: #ffd43b;
 }
