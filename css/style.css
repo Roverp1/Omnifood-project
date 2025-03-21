@@ -602,6 +602,11 @@ b {
   transform: scale(1.1);
 }
 
+.testimonial__gallery:has(.testimonial__gallery__img:hover) img:not(:hover) {
+  scale: 0.9;
+  filter: brightness(0.6);
+}
+
 /*PRICING SECTION */
 .pricing__section {
   margin: 9.6rem 0;
