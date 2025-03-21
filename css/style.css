@@ -194,7 +194,7 @@ body {
 
   display: inline-block;
 
-  transition: all, 0.3s;
+  transition: all 0.3s;
 
   border-radius: var(--bdrs-default);
 }
@@ -597,4 +597,13 @@ b {
 
 .testimonial__gallery__img:hover {
   transform: scale(1.1);
+}
+
+/*PRICING SECTION */
+.pricing__section {
+  margin: 9.6rem 0;
+}
+
+.pricing__heading-wrapper {
+  margin-bottom: 9.6rem;
 }
